@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\robert.nadymacek\\Documents\\Github\\Portfolio_new\\Portfolio_2nd.Server\\Portfolio_2nd.Server.csproj": {}
+    "C:\\Users\\Bobes\\Documents\\GitHub\\Portfolio_new\\Portfolio_2nd.Server\\Portfolio_2nd.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\robert.nadymacek\\Documents\\Github\\Portfolio_new\\Portfolio_2nd.Server\\Portfolio_2nd.Server.csproj": {
+    "C:\\Users\\Bobes\\Documents\\GitHub\\Portfolio_new\\Portfolio_2nd.Server\\Portfolio_2nd.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\robert.nadymacek\\Documents\\Github\\Portfolio_new\\Portfolio_2nd.Server\\Portfolio_2nd.Server.csproj",
+        "projectUniqueName": "C:\\Users\\Bobes\\Documents\\GitHub\\Portfolio_new\\Portfolio_2nd.Server\\Portfolio_2nd.Server.csproj",
         "projectName": "Portfolio_2nd.Server",
-        "projectPath": "C:\\Users\\robert.nadymacek\\Documents\\Github\\Portfolio_new\\Portfolio_2nd.Server\\Portfolio_2nd.Server.csproj",
-        "packagesPath": "C:\\Users\\robert.nadymacek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\robert.nadymacek\\Documents\\Github\\Portfolio_new\\Portfolio_2nd.Server\\obj\\",
+        "projectPath": "C:\\Users\\Bobes\\Documents\\GitHub\\Portfolio_new\\Portfolio_2nd.Server\\Portfolio_2nd.Server.csproj",
+        "packagesPath": "C:\\Users\\Bobes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bobes\\Documents\\GitHub\\Portfolio_new\\Portfolio_2nd.Server\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\robert.nadymacek\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Bobes\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\Bobes\\.dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
