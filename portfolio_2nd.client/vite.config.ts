@@ -1,52 +1,17 @@
-import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import fs from 'fs';
 import path from 'path';
-import child_process from 'child_process';
-import { env } from 'process';
-
-const baseFolder =
-  env.APPDATA !== undefined && env.APPDATA !== ''
-    ? `${env.APPDATA}/ASP.NET/https`
-    : `${env.HOME}/.aspnet/https`;
-
-const certificateName = "portfolio_2nd.client";
-const certFilePath = path.join(baseFolder, `${certificateName}.pem`);
-const keyFilePath = path.join(baseFolder, `${certificateName}.key`);
-
-if (!fs.existsSync(baseFolder)) {
-  fs.mkdirSync(baseFolder, { recursive: true });
-}
-
-
-const target = env.ASPNETCORE_HTTPS_PORT ? `https://localhost:${env.ASPNETCORE_HTTPS_PORT}` :
-  env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'http://localhost:5083';
-
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': path.resolve(__dirname, 'src')
     }
   },
-  server: {
-    proxy: {
-      '^/weatherforecast': {
-        target,
-        secure: false
-      }
-    },
-    port: parseInt(env.DEV_SERVER_PORT || '58776'),
-    https: false
-  },
-
   css: {
     preprocessorOptions: {
       scss: {
-        // 👇 This line injects your variables file globally
-        additionalData: `@use "@/styles/variables.scss" as *;`
+        additionalData: `@use "@/styles/_variables.scss" as *;`
       }
     }
   }

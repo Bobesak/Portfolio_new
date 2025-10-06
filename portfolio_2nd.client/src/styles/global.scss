@@ -1,19 +1,11 @@
-
-@font-face {
-  font-family: 'Bequta';
-  src: url('@/assets/fonts/Bequta.woff2') format('woff2'),
-  url('@/assets/fonts/Bequta.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* src/styles/global.scss */
+@use "./_variables.scss" as *;
 
 :root {
-  --font-main: 'Bequta', serif;
+  --font-main: 'Courier New', Courier, monospace;
 }
 
 body {
   margin: 0;
   font-family: var(--font-main);
-  background-color: #1a1a1a;
 }
