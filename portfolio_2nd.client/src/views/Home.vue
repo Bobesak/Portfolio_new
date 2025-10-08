@@ -41,31 +41,11 @@ const showsixseven = ref<boolean>(false);
 </template>
 
 <style scoped lang="scss">
-.sixseven {
-  left: 13vw;
-  top: 5.5vh;
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.67s ease, top 0.67s ease;
-  z-index: -1;
-  user-select: none;
-}
 
-.sixseven.visible {
-  visibility: visible;
-  opacity: 1;
-  position: fixed;
-  font-size: 4vw;
-  top: 12vh;
-  transition: visibility 0.67s ease-out, top 0.67s ease-out;
-  color: blue;
-  user-select: none;
-}
 
 .Body {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-self: center;
   width: 100vw;
   height: 90vh;
@@ -83,23 +63,44 @@ const showsixseven = ref<boolean>(false);
   border-right: 1px solid $BorderColor;
 
   .Header {
-    height: 10vh;
-    width: 20vw;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    position: relative; // anchor the stuff
 
     .htext {
-      text-align: center;
+      position: relative;
       font-family: monospace;
       font-size: 8vh;
-      position: fixed;
-      left: 9.5vw;
-      top: -2.5vh;
+      margin: 0;
       user-select: none;
+      z-index: 1; // sit on top
+
+      .sixseven {
+        position: fixed;
+        left: 13vw;
+        top: 5.5vh;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.67s ease, top 0.67s ease;
+        z-index: 0; // sits *under* .htext but above bg
+        user-select: none;
+      }
+
+      .sixseven.visible {
+        visibility: visible;
+        opacity: 1;
+        top: 12vh;
+        font-size: 4vw;
+        color: blue;
+      }
     }
   }
 }
 
-.UISelector {
+  .UISelector {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -116,14 +117,21 @@ const showsixseven = ref<boolean>(false);
 
 .RightView {
   width: 30vw;
-  margin-right: 2vw;
+  margin-left:3vw;
   margin-top: 4vh;
 
   .info {
     height: 80vh;
-    overflow: scroll;
     padding-right: 1vw;
     scroll-behavior: smooth;
+    //scroll bar
+    scrollbar-width: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    //webkit css
+    .info::-webkit-scrollbar{
+      display: none;
+    }
 
     p {
       font-size: 1.5vw;
