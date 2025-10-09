@@ -1,10 +1,8 @@
 npm<script setup lang="ts">
-import Top_slider from "@/components/top_slider.vue";
 </script>
 
 <template>
   <div class="container">
-    <top_slider/>
     <RouterView></RouterView>
   </div>
 </template>

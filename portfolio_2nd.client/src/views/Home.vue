@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import SkillTree from "@/components/SkillTree.vue";
 
 const selectedtab = ref<string | null>("info");
 const showsixseven = ref<boolean>(false);
@@ -31,7 +32,9 @@ const showsixseven = ref<boolean>(false);
         <p>My goal is to become a full-stack developer, so I’m working hard to learn both the front-end and back-end stuff.</p>
       </div>
       <div v-if="selectedtab === 'skills'" class="skills">
-        <p>this is skills</p>
+          <div class="SkillsTree">
+            <SkillTree/>
+          </div>
       </div>
       <div v-if="selectedtab === 'projects'" class="projects">
         <p>this is projects</p>
@@ -41,6 +44,7 @@ const showsixseven = ref<boolean>(false);
 </template>
 
 <style scoped lang="scss">
+
 
 
 .Body {
@@ -116,11 +120,12 @@ const showsixseven = ref<boolean>(false);
 }
 
 .RightView {
-  width: 30vw;
+  width: 60vw;
   margin-left:3vw;
   margin-top: 4vh;
 
   .info {
+    width: 30vw;
     height: 80vh;
     padding-right: 1vw;
     scroll-behavior: smooth;
@@ -138,5 +143,8 @@ const showsixseven = ref<boolean>(false);
       font-family: monospace;
     }
   }
+  .SkillsTree{
+  }
+
 }
 </style>
